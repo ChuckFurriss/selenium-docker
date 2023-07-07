@@ -5,6 +5,9 @@ pipeline {
         stage('Build Jar') {
             steps {
                 //sh
+                sh "cd /Users/kevin.hernandez"
+                sh "source .bash_profile"
+                sh "cd /Users/kevin.hernandez/Documents/docker-udemy/jenkins/workspace/SELENIUM_DOCKER_BUILDER"
                 sh "mvn clean package -DskipTests"
             }
         }
