@@ -5,8 +5,8 @@ pipeline {
         stage('Build Jar') {
             steps {
                 //sh
-                sh "cd /Users/kevin.hernandez && source .bash_profile"
-                sh "mvn clean package -DskipTests"
+
+                sh "cd /Users/kevin.hernandez && source .bash_profile && mvn clean package -DskipTests"
             }
         }
         stage('Build Image') {
